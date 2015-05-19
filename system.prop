@@ -2,3 +2,7 @@
 rild.libargs=-d /dev/smd0
 rild.libpath=/system/lib/libsec-ril.so
 ro.ril.telephony.mqanelements=6
+
+# RIL
+persist.radio.multisim.config=dsds
+ro.multisim.simslotcount=2

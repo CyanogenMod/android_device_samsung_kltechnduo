@@ -1,0 +1,22 @@
+# Copyright (C) 2012 The Android Open Source Project
+#
+# IMPORTANT: Do not create world writable files or directories.
+# This is a common source of Android security bugs.
+#
+
+# for multi rild
+service ril-daemon1 /system/bin/rild -s rild1 -ds rild-debug1 -l /system/lib/libsec-ril-dsds.so
+    class main
+    socket rild1 stream 660 root radio
+    socket rild-debug1 stream 660 radio system
+    user root
+    group radio cache inet misc audio log qcom_diag sdcard_r shell sdcard_rw system drmrpc
+
+service ril-sh /system/bin/sh /init.ril.sh
+    class main
+    user root
+    disabled
+    oneshot
+
+on property:vold.decrypt=trigger_restart_framework
+    start ril-sh

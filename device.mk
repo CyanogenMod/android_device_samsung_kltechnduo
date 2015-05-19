@@ -22,6 +22,11 @@ $(call inherit-product-if-exists, vendor/samsung/kltechnduo/kltechnduo-vendor.mk
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# RIL
+PRODUCT_PACKAGES += \
+    init.target.rc \
+    init.ril.sh
+
 # NFC
 PRODUCT_PACKAGES += \
     nfc_nci.pn54x.default
