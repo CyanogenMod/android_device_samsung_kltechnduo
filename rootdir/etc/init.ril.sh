@@ -1,3 +1,3 @@
 #!/system/bin/sh
 
-start ril-daemon1
+start ril-daemon2
