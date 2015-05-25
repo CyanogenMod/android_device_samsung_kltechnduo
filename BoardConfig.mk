@@ -23,6 +23,7 @@ TARGET_GLOBAL_CFLAGS += -DANDROID_MULTI_SIM
 TARGET_GLOBAL_CPPFLAGS += -DANDROID_MULTI_SIM
 
 # Kernel
+BOARD_CUSTOM_BOOTIMG_MK := device/samsung/kltechnduo/mkbootimg.mk
 TARGET_KERNEL_VARIANT_CONFIG := msm8974pro_sec_klte_chnduo_defconfig
 
 # Init
