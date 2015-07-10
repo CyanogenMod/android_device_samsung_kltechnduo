@@ -39,6 +39,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 12984479744 # 12984496128 - 16384
 SIM_COUNT := 2
 TARGET_GLOBAL_CFLAGS += -DANDROID_MULTI_SIM
 TARGET_GLOBAL_CPPFLAGS += -DANDROID_MULTI_SIM
+BOARD_RIL_CLASS += ../../../device/samsung/kltechnduo/ril
 
 # inherit from the proprietary version
 -include vendor/samsung/kltechnduo/BoardConfigVendor.mk
