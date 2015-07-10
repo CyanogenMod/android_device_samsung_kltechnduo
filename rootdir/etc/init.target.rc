@@ -12,11 +12,4 @@ service ril-daemon2 /system/bin/rild -l /system/lib/libsec-ril-dsds.so -c 2
     user root
     group radio cache inet misc audio log qcom_diag
 
-service ril-sh /system/bin/sh /init.ril.sh
-    class main
-    user root
-    disabled
-    oneshot
 
-on property:vold.decrypt=trigger_restart_framework
-    start ril-sh

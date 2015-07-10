@@ -24,8 +24,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # RIL
 PRODUCT_PACKAGES += \
-    init.target.rc \
-    init.ril.sh
+    init.target.rc
 
 # NFC
 PRODUCT_PACKAGES += \
