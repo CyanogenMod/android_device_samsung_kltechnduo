@@ -2,6 +2,17 @@
 vendor/firmware/bcm4350.hcd
 vendor/firmware/BT_FW_VER_BCM4354_003.001.012.0167.0213_K_LTE_ORC.hcd
 
+# CNE
+vendor/lib/libcne.so
+vendor/lib/libcneapiclient.so
+vendor/lib/libcneconn.so
+vendor/lib/libcneqmiutils.so
+vendor/lib/libmasc.so
+vendor/lib/libNimsWrap.so
+vendor/lib/libvendorconn.so
+vendor/lib/libwqe.so
+vendor/lib/libxml.so
+
 # GPS
 -app/com.qualcomm.location.apk
 etc/permissions/com.qualcomm.location.xml
@@ -11,6 +22,19 @@ vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
 vendor/lib/liblocationservice.so
+
+# Graphics firmware
+etc/firmware/a225_pfp.fw
+etc/firmware/a225_pm4.fw
+etc/firmware/a225p5_pm4.fw
+etc/firmware/a300_pfp.fw
+etc/firmware/a300_pm4.fw
+
+# Listen service
+vendor/lib/liblistenhardware.so
+vendor/lib/liblistenjni.so
+vendor/lib/liblisten.so
+vendor/lib/liblistensoundmodel.so
 
 # NFC
 vendor/firmware/libpn547_fw.so
@@ -39,8 +63,29 @@ bin/rild
 bin/rmt_storage
 lib/libreference-ril.so
 lib/libril.so
+lib/librilutils.so
 lib/libsec-ril.so
 lib/libsec-ril-dsds.so
 lib/libsecnativefeature.so
 lib/libsecril-client.so
+vendor/lib/libconfigdb.so
 vendor/lib/libril-qcril-hook-oem.so
+
+# WFD
+vendor/lib/libwfdcommonutils.so
+vendor/lib/libwfdhdcpcp.so
+vendor/lib/libwfdmmsink.so
+vendor/lib/libwfdmmsrc.so
+vendor/lib/libwfdmmutils.so
+vendor/lib/libwfdnative.so
+vendor/lib/libwfdrtsp.so
+vendor/lib/libwfdsm.so
+vendor/lib/libwfduibcinterface.so
+vendor/lib/libwfduibcsink.so
+vendor/lib/libwfduibcsinkinterface.so
+vendor/lib/libwfduibcsrc.so
+vendor/lib/libwfduibcsrcinterface.so
+vendor/lib/libmmwfdinterface.so
+vendor/lib/libmmwfdsinkinterface.so
+vendor/lib/libmmwfdsrcinterface.so
+
