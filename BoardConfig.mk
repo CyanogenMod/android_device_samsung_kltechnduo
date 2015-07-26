@@ -17,6 +17,10 @@
 
 TARGET_OTA_ASSERT_DEVICE := kltexx,klte,kltechnduo,klteduoszn,klteduoszm
 
+# Audio
+AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
+AUDIO_FEATURE_SAMSUNG_DUAL_SIM := true
+
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/kltechnduo/mkbootimg.mk
 TARGET_KERNEL_VARIANT_CONFIG := msm8974pro_sec_klte_chnduo_defconfig
