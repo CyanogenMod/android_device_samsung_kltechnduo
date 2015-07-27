@@ -77,7 +77,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
 
 void gsm_properties()
 {
-    property_set("telephony.lteOnGsmDevice", "0");
-    property_set("ro.telephony.default_network", "0");
+    property_set("telephony.lteOnGsmDevice", "1");
+    property_set("ro.telephony.default_network", "9");
     property_set("ro.telephony.ril.config", "newDialCode");
 }
