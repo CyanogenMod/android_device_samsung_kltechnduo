@@ -43,6 +43,18 @@ void gsm_properties()
     property_set("ro.telephony.ril.config", "newDialCode");
 }
 
+void cdma_properties(char default_cdma_sub[], char operator_numeric[],
+        char operator_alpha[])
+{
+    property_set("ril.subscription.types", "NV,RUIM");
+    property_set("ro.cdma.home.operator.numeric", operator_numeric);
+    property_set("ro.cdma.home.operator.alpha", operator_alpha);
+    property_set("ro.telephony.default_cdma_sub", default_cdma_sub);
+    property_set("ro.telephony.default_network", "10");
+    property_set("ro.telephony.ril.config", "newDriverCallU,newDialCode");
+    property_set("telephony.lteOnCdmaDevice", "1");
+}
+
 void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *board_type)
 {
     char platform[PROP_VALUE_MAX];
@@ -75,6 +87,13 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.product.model", "SM-G9008W");
         property_set("ro.product.device", "klteduoszm");
         gsm_properties();
+    } else if (strstr(bootloader, "G9009W")) {
+        /* klteduosctc */
+        property_set("ro.build.fingerprint", "samsung/klteduosctc/klte:5.0/LRX21T/G9009WKEU1BOI2:user/release-keys");
+        property_set("ro.build.description", "klteduosctc-user 5.0 LRX21T G9009WKEU1BOI2 release-keys");
+        property_set("ro.product.model", "SM-G9009W");
+        property_set("ro.product.device", "klteduosctc");
+        cdma_properties("0", "46003", "中国电信");
     } 
 
     property_get("ro.product.device", device);
