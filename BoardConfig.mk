@@ -15,7 +15,7 @@
 # inherit from common klte
 -include device/samsung/klte-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := kltexx,klte,kltechnduo,klteduoszn,klteduoszm
+TARGET_OTA_ASSERT_DEVICE := kltexx,klte,kltechnduo,klteduoszn,klteduoszm,klteduosctc
 
 # Audio
 AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
