@@ -27,7 +27,7 @@ TARGET_KERNEL_VARIANT_CONFIG := msm8974pro_sec_klte_chnduo_defconfig
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm
-TARGET_LIBINIT_DEFINES_FILE := device/samsung/kltechnduo/init/init_klte.c
+TARGET_LIBINIT_DEFINES_FILE := device/samsung/kltechnduo/init/init_klte.cpp
 TARGET_UNIFIED_DEVICE := true
 
 # NFC
