@@ -43,8 +43,8 @@ void gsm_properties()
     property_set("ro.telephony.ril.config", "newDialCode");
 }
 
-void cdma_properties(char default_cdma_sub[], char operator_numeric[],
-        char operator_alpha[])
+void cdma_properties(char const default_cdma_sub[], char const operator_numeric[],
+        char const operator_alpha[])
 {
     property_set("ril.subscription.types", "NV,RUIM");
     property_set("ro.cdma.home.operator.numeric", operator_numeric);
