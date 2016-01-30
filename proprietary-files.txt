@@ -14,7 +14,6 @@ vendor/lib/libxml.so
 
 # GPS
 etc/clatd.conf
-etc/flp.conf
 etc/gps.conf
 etc/sap.conf
 lib/hw/gps.default.so
