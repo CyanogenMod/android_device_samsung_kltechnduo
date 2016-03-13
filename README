@@ -1,5 +1,9 @@
 Copyright 2015 - The CyanogenMod Project
 
-Device configuration for Samsung Galaxy S 5 China Dual SIMs(SM-G9006W and SM-G9008W).
+Device configuration for Samsung Galaxy S 5 China Dual SIMs(SM-G9006W , SM-G9008W and SM-G9009W).
+
+NOTICE:
+By all means, this device configuration supports these three China models of Galaxy S5. However, without a proper config of RIL allowcation, SM-G9009W had been kept out for a long time.
+Now this problem will be solved. If you have a SM-G9009W by chance, why not give it a shot?
 
 WORK IN PROGRESS. WILL EAT YOUR CAT.
