@@ -74,7 +74,9 @@ lib/libreference-ril.so
 lib/libril.so
 lib/librilutils.so
 lib/libsec-ril.so
+lib/libsec-ril-09w.so
 lib/libsec-ril-dsds.so
+lib/libsec-ril-dsds-09w.so
 lib/libsecnativefeature.so
 lib/libsecril-client.so
 vendor/lib/libconfigdb.so

@@ -12,4 +12,17 @@ service ril-daemon2 /system/bin/rild -l /system/lib/libsec-ril-dsds.so -c 2
     user root
     group radio cache inet misc audio log qcom_diag
 
+# for G9009W
+service ril-daemon2-09w /system/bin/rild -l /system/lib/libsec-ril-dsds-09w.so -c 2
+    socket rild2 stream 660 root radio
+    socket rild-debug2 stream 660 radio system
+    user root
+    group radio cache inet misc audio log qcom_diag
+
+service qcom-ril-sh /system/bin/sh /init.qcom.ril.sh
+    class late_start
+    user root
+    group root
+    oneshot
+
 
