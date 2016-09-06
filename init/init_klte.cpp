@@ -37,8 +37,6 @@
 
 #include "init_msm8974.h"
 
-#define ISMATCH(a, b) (!strncmp((a), (b), PROP_VALUE_MAX))
-
 void gsm_properties(char const default_network[])
 {
     property_set("telephony.lteOnGsmDevice", "1");
@@ -60,19 +58,17 @@ void cdma_properties(char const default_cdma_sub[], char const operator_numeric[
 
 void init_target_properties()
 {
-    char platform[PROP_VALUE_MAX];
-    char bootloader[PROP_VALUE_MAX];
-    char device[PROP_VALUE_MAX];
-    char devicename[PROP_VALUE_MAX];
-    int rc;
+    std::string platform;
+    std::string bootloader;
+    std::string device;
 
-    rc = property_get("ro.board.platform", platform);
-    if (!rc || !ISMATCH(platform, ANDROID_TARGET))
+    platform = property_get("ro.board.platform");
+    if (platform != ANDROID_TARGET)
         return;
 
-    property_get("ro.bootloader", bootloader);
+    bootloader = property_get("ro.bootloader");
 
-    if (strstr(bootloader, "G9006W")) {
+    if (bootloader == "G9006W") {
         /* klteduoszn */
         property_set("ro.build.fingerprint", "samsung/klteduoszn/klteduoszn:5.0/LRX21T/G9006WZNU1BOC2:user/release-keys");
         property_set("ro.build.description", "klteduoszn-user 5.0 LRX21T G9006WZNU1BOC2 release-keys");
@@ -80,7 +76,7 @@ void init_target_properties()
         property_set("ro.product.device", "klteduoszn");
         property_set("rild.libpath", "/system/lib/libsec-ril.so");
         gsm_properties("9");
-    } else if (strstr(bootloader, "G9008W")) {
+    } else if (bootloader == "G9008W") {
         /* klteduoszm */
         property_set("ro.build.fingerprint", "samsung/klteduoszm/klteduoszm:5.0/LRX21T/G9008WZMU1BOC2:user/release-keys");
         property_set("ro.build.description", "klteduoszm-user 5.0 LRX21T G9008WZMU1BOC2 release-keys");
@@ -88,7 +84,7 @@ void init_target_properties()
         property_set("ro.product.device", "klteduoszm");
         property_set("rild.libpath", "/system/lib/libsec-ril.so");
         gsm_properties("17");
-    } else if (strstr(bootloader, "G9009W")) {
+    } else if (bootloader == "G9009W") {
         /* klteduosctc */
         property_set("ro.build.fingerprint", "samsung/klteduosctc/klte:5.0/LRX21T/G9009WKEU1BOI2:user/release-keys");
         property_set("ro.build.description", "klteduosctc-user 5.0 LRX21T G9009WKEU1BOI2 release-keys");
@@ -100,8 +96,7 @@ void init_target_properties()
         cdma_properties("0", "46003", "中国电信", "10");
     } 
 
-    property_get("ro.product.device", device);
-    strlcpy(devicename, device, sizeof(devicename));
-    INFO("Found bootloader id %s setting build properties for %s device\n", bootloader, devicename);
+    device = property_get("ro.product.device");
+    INFO("Found bootloader id %s setting build properties for %s device\n", bootloader.c_str(), device.c_str());
 }
 
