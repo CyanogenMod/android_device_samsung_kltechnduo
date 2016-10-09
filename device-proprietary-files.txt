@@ -9,21 +9,6 @@ vendor/lib/libvendorconn.so
 vendor/lib/libwqe.so
 vendor/lib/libxml.so
 
-# GPS
-etc/clatd.conf
-etc/gps.conf
-etc/sap.conf
-lib/hw/gps.default.so
-lib/libgps.utils.so
-lib/libloc_api_v02.so
-lib/libloc_core.so
-lib/libloc_ds_api.so
-lib/libloc_eng.so
-vendor/lib/hw/flp.default.so
-vendor/lib/libgeofence.so
-vendor/lib/libizat_core.so
-vendor/lib/liblbs_core.so
-
 # Graphics firmware
 etc/firmware/a225_pfp.fw
 etc/firmware/a225_pm4.fw
