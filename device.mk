@@ -27,7 +27,11 @@ PRODUCT_PACKAGES += \
     init.target.rc
 
 # NFC
+# See https://github.com/CyanogenMod/android_external_libnfc-nci/blob/cm-14.1/halimpl/pn54x/Android.mk#L21
+# for magic values of NXP_CHIP_TYPE.
+NXP_CHIP_TYPE := 1
 PRODUCT_PACKAGES += \
+    libpn547_fw \
     nfc_nci.pn54x.default
 
 PRODUCT_COPY_FILES += \

@@ -37,9 +37,6 @@ vendor/lib/liblistenjni.so
 vendor/lib/liblisten.so
 vendor/lib/liblistensoundmodel.so
 
-# NFC
-vendor/firmware/libpn547_fw.so
-
 # Qualcomm framework
 lib/libmdmdetect.so
 lib/libperipheral_client.so
